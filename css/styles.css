@@ -145,3 +145,7 @@ body {
 p:nth-child(2){
     padding-bottom: 20px;
 }
+
+.form {
+    box-shadow: 0 0 0.1rem;
+}
