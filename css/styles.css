@@ -47,15 +47,20 @@ p, h1, h2, h3, h4, h5, h6 {
 
 :root {
     --main-font: Helvetica, sans-serif;
+    --left-panel-width: 35vw;
+    --left-panel-height: 100vh;
+    --left-panel-padding: 10px;
 }
 
 body {
     display: flex;
 }
 
+/* Left panel styling */
+
 .image {
-    width: 35vw;
-    height: 100vh;
+    width: var(--left-panel-width);
+    height: var(--left-panel-height);
     position: relative;
 }
 
@@ -69,7 +74,7 @@ body {
     color: rgba(100%, 100%, 100%, 0.7);
     position: absolute;
     width: 100%;
-    padding-bottom: 10px;
+    padding-bottom: var(--left-panel-padding);
     bottom: 0;
     left: 0;
     text-align: center;
@@ -86,7 +91,8 @@ body {
     height: 15%;
     justify-content: center;
     background-color: rgba(0%, 0%, 0%, 0.4);
-    padding: 10px 0;
+    padding: var(--left-panel-padding) 0;
+    min-height: 60px;
 }
 
 .band .text {
@@ -94,5 +100,5 @@ body {
     color: white;
     font-family: "norse";
     align-items: center;
-    font-size: 100px;
+    font-size: calc(2rem + 5vw);
 }
