@@ -48,8 +48,15 @@ p, h1, h2, h3, h4, h5, h6 {
 :root {
     --main-font: Helvetica, sans-serif;
     --left-panel-width: 35vw;
-    --left-panel-height: 100vh;
+    --panels-height: 100vh;
     --left-panel-padding: 10px;
+    --left-panel-band-height: 15%;
+    --left-panel-band-height-position: 20%;
+
+    --right-panel-background-color: #F7F7F7;
+    --right-panel-top-height: calc(var(--left-panel-band-height) + var(--left-panel-band-height-position));
+    --right-panel-form-height: 40vh;
+    --right-panel-bottom-height: calc(100vh - (var(--right-panel-top-height) + var(--right-panel-form-height)));
 }
 
 body {
@@ -58,13 +65,13 @@ body {
 
 /* Left panel styling */
 
-.image {
+.left-panel {
     width: var(--left-panel-width);
-    height: var(--left-panel-height);
+    height: var(--panels-height);
     position: relative;
 }
 
-.image img {
+.left-panel img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -86,9 +93,9 @@ body {
 .band {
     display: flex;
     position: absolute;
-    top: 20%;
+    top: var(--left-panel-band-height-position);
     width: 100%;
-    height: 15%;
+    height: var(--left-panel-band-height);
     justify-content: center;
     background-color: rgba(0%, 0%, 0%, 0.4);
     padding: var(--left-panel-padding) 0;
@@ -101,4 +108,27 @@ body {
     font-family: "norse";
     align-items: center;
     font-size: calc(2rem + 5vw);
+}
+
+.right-panel {
+    --right-panel-width: calc(100vw - var(--left-panel-width));
+    width: var(--right-panel-width);
+    height: var(--panels-height);
+}
+
+.right-panel .top {
+    width: 100%;
+    height: var(--right-panel-top-height);
+    background-color: var(--right-panel-background-color);
+}
+
+.right-panel .form {
+    width: 100%;
+    height: var(--right-panel-form-height);
+}
+
+.right-panel .bottom {
+    width: 100%;
+    height: var(--right-panel-bottom-height);
+    background-color: var(--right-panel-background-color);
 }
