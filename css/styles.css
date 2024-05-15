@@ -2,6 +2,7 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -30,4 +31,68 @@ p, h1, h2, h3, h4, h5, h6 {
   
 #root, #__next {
     isolation: isolate;
+}
+
+/* Custom font */
+
+@font-face {
+  font-family: 'norse';
+  src: url('../assets/fonts/Norse-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+  
+/* Sign-up form styling */
+
+:root {
+    --main-font: Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+}
+
+.image {
+    width: 35vw;
+    height: 100vh;
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.credit {
+    color: rgba(100%, 100%, 100%, 0.7);
+    position: absolute;
+    width: 100%;
+    padding-bottom: 10px;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: 12px;
+    font-family: var(--main-font);
+}
+
+
+.band {
+    display: flex;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    height: 15%;
+    justify-content: center;
+    background-color: rgba(0%, 0%, 0%, 0.4);
+    padding: 10px 0;
+}
+
+.band .text {
+    display: flex;
+    color: white;
+    font-family: "norse";
+    align-items: center;
+    font-size: 100px;
 }
