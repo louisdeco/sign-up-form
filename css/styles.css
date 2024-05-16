@@ -184,6 +184,7 @@ p:nth-child(2){
 }
 
 .form-row input:focus {
+    outline: none;
     border: solid 1px #4169E1;
     box-shadow: 1px 1px 3px grey;
 }
