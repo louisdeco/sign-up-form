@@ -148,6 +148,7 @@ body {
     width: 100%;
     height: var(--right-panel-bottom-height);
     background-color: var(--right-panel-background-color);
+    padding: 3% 12% 0 5%;
 }
 
 p:nth-child(2){
@@ -176,7 +177,7 @@ p:nth-child(2){
 }
 
 .form-row input {
-    width: calc(10rem + 4vw);
+    width: calc(5rem + 10vw);
     height: calc(1.7rem + 0.5vh);
     padding: 5px;
     border: solid 1px #E5E7EB;
@@ -197,4 +198,26 @@ p:nth-child(2){
     font-size: calc(0.4rem + 0.5vw);
     font-weight: bold;
     color: #424952;
+}
+
+button {
+    background-color: #596D48;
+    border: none;
+    border-radius: 0.3rem;
+    color: white;
+    padding: calc(0.2rem + 1vh) calc(1.6rem + 1vw);
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px grey;
+    margin-bottom: 1.2rem;
+}
+
+.log-in {
+    font-size: calc(0.6rem + 0.5vw);
+}
+
+.log-in a {
+    color: #596D48;
+    font-weight: bold;
+    cursor: pointer;
 }
