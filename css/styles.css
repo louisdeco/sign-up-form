@@ -110,6 +110,8 @@ body {
     font-size: calc(2rem + 5vw);
 }
 
+/* Right panel styling */
+
 .right-panel {
     --right-panel-width: calc(100vw - var(--left-panel-width));
     width: var(--right-panel-width);
@@ -122,11 +124,24 @@ body {
     background-color: var(--right-panel-background-color);
     display: flex;
     flex-direction: column;
+    padding: 10% 12% 0 5%;
 }
 
-.right-panel .form {
+.right-panel .top,
+.right-panel .text {
+    overflow: hidden;
+    font-size: calc(0.1rem + 1.5vw);
+    font-weight: bold;
+}
+
+.right-panel .middle {
     width: 100%;
     height: var(--right-panel-form-height);
+    box-shadow: 0 4px 5px -2px gray;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 12% 0 5%;
 }
 
 .right-panel .bottom {
@@ -135,17 +150,50 @@ body {
     background-color: var(--right-panel-background-color);
 }
 
-.right-panel .top {
-    font-size: calc(0.1rem + 1.5vw);
-    font-weight: bold;
-    padding: 10% 12% 0 5%;
-    overflow: hidden;
-}
-
 p:nth-child(2){
     padding-bottom: 20px;
 }
 
+.middle .text {
+    margin-bottom: 1.5rem;
+}
+
+.middle .right-form,
+.middle .left-form {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1rem + 2vh);
+}
+
 .form {
-    box-shadow: 0 0 0.1rem;
+    display: flex;
+    gap: 15%;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row input {
+    width: calc(10rem + 4vw);
+    height: calc(1.7rem + 0.5vh);
+    padding: 5px;
+    border: solid 1px #E5E7EB;
+    border-radius: 3px;
+}
+
+.form-row input:focus {
+    border: solid 1px #4169E1;
+    box-shadow: 1px 1px 3px grey;
+}
+
+.form-row input:invalid {
+    border: solid 1px red;
+}
+
+.form-row label {
+    font-size: calc(0.4rem + 0.5vw);
+    font-weight: bold;
+    color: #424952;
 }
